@@ -1,0 +1,66 @@
+
+/* Class = "IBUILabel"; text = "Total Amount"; ObjectID = "3IV-f1-nh9"; */
+"3IV-f1-nh9.text" = "Total Amount";
+
+/* Class = "IBUINavigationItem"; title = "Tip Calculator"; ObjectID = "4q5-9p-hYG"; */
+"4q5-9p-hYG.title" = "Tip Calculator";
+
+/* Class = "IBUILabel"; text = "$0.00"; ObjectID = "60D-xd-2av"; */
+"60D-xd-2av.text" = "$0.00";
+
+/* Class = "IBUILabel"; text = "%"; ObjectID = "7Zd-J6-avA"; */
+"7Zd-J6-avA.text" = "%";
+
+/* Class = "IBUILabel"; text = "Thrid Tip value"; ObjectID = "DhY-dL-nBz"; */
+"DhY-dL-nBz.text" = "Thrid Tip value";
+
+/* Class = "IBUINavigationItem"; title = "Define Tip %"; ObjectID = "Fwz-mj-lgg"; */
+"Fwz-mj-lgg.title" = "Define Tip %";
+
+/* Class = "IBUITextField"; placeholder = "0"; ObjectID = "H5D-mg-w45"; */
+"H5D-mg-w45.placeholder" = "0";
+
+/* Class = "IBUITextField"; placeholder = "eg. $10"; ObjectID = "KdF-Ir-P9h"; */
+"KdF-Ir-P9h.placeholder" = "eg. $10";
+
+/* Class = "IBUILabel"; text = "$0.00"; ObjectID = "O7J-sV-cHu"; */
+"O7J-sV-cHu.text" = "$0.00";
+
+/* Class = "IBUILabel"; text = "First Tip value"; ObjectID = "OYK-cH-Ybm"; */
+"OYK-cH-Ybm.text" = "First Tip value";
+
+/* Class = "IBUILabel"; text = "%"; ObjectID = "VDq-E6-dFF"; */
+"VDq-E6-dFF.text" = "%";
+
+/* Class = "IBUILabel"; text = "%"; ObjectID = "Zdj-e9-Obl"; */
+"Zdj-e9-Obl.text" = "%";
+
+/* Class = "IBUILabel"; text = "Amount"; ObjectID = "aJl-zz-skq"; */
+"aJl-zz-skq.text" = "Amount";
+
+/* Class = "IBUILabel"; text = "Second Tip value"; ObjectID = "e09-Z7-jA7"; */
+"e09-Z7-jA7.text" = "Second Tip value";
+
+/* Class = "IBUITextField"; placeholder = "0"; ObjectID = "eJf-OA-3Qk"; */
+"eJf-OA-3Qk.placeholder" = "0";
+
+/* Class = "IBUITextField"; placeholder = "0"; ObjectID = "ePy-nW-u08"; */
+"ePy-nW-u08.placeholder" = "0";
+
+/* Class = "IBUIBarButtonItem"; title = "Settings"; ObjectID = "ehZ-ig-pfC"; */
+"ehZ-ig-pfC.title" = "Settings";
+
+/* Class = "IBUILabel"; text = "Please add the three values of the default tips "; ObjectID = "k1K-VI-UDN"; */
+"k1K-VI-UDN.text" = "Please add the three values of the default tips ";
+
+/* Class = "IBUISegmentedControl"; rno-R1-fYn.segmentTitles[0] = "15%"; ObjectID = "rno-R1-fYn"; */
+"rno-R1-fYn.segmentTitles[0]" = "15%";
+
+/* Class = "IBUISegmentedControl"; rno-R1-fYn.segmentTitles[1] = "20%"; ObjectID = "rno-R1-fYn"; */
+"rno-R1-fYn.segmentTitles[1]" = "20%";
+
+/* Class = "IBUISegmentedControl"; rno-R1-fYn.segmentTitles[2] = "25%"; ObjectID = "rno-R1-fYn"; */
+"rno-R1-fYn.segmentTitles[2]" = "25%";
+
+/* Class = "IBUILabel"; text = "Tip Amount"; ObjectID = "tTu-DN-eyL"; */
+"tTu-DN-eyL.text" = "Tip Amount";

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE47A3931A679FBD0025068B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE47A3921A679FBD0025068B /* SettingsViewController.swift */; };
 		CEC3B7051A66475B005679E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC3B7041A66475B005679E6 /* AppDelegate.swift */; };
 		CEC3B7071A66475B005679E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC3B7061A66475B005679E6 /* ViewController.swift */; };
 		CEC3B70A1A66475B005679E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEC3B7081A66475B005679E6 /* Main.storyboard */; };
@@ -26,6 +27,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE47A3921A679FBD0025068B /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		CE6CAD6B1A68D05600C152AD /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		CE6CAD6C1A68D05600C152AD /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		CEC3B6FF1A66475B005679E6 /* tipCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tipCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEC3B7031A66475B005679E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEC3B7041A66475B005679E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +84,7 @@
 				CEC3B7041A66475B005679E6 /* AppDelegate.swift */,
 				CEC3B7061A66475B005679E6 /* ViewController.swift */,
 				CEC3B7081A66475B005679E6 /* Main.storyboard */,
+				CE47A3921A679FBD0025068B /* SettingsViewController.swift */,
 				CEC3B70B1A66475B005679E6 /* Images.xcassets */,
 				CEC3B70D1A66475B005679E6 /* LaunchScreen.xib */,
 				CEC3B7021A66475B005679E6 /* Supporting Files */,
@@ -214,6 +219,7 @@
 			files = (
 				CEC3B7071A66475B005679E6 /* ViewController.swift in Sources */,
 				CEC3B7051A66475B005679E6 /* AppDelegate.swift in Sources */,
+				CE47A3931A679FBD0025068B /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +246,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				CEC3B7091A66475B005679E6 /* Base */,
+				CE6CAD6B1A68D05600C152AD /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -248,6 +255,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				CEC3B70E1A66475B005679E6 /* Base */,
+				CE6CAD6C1A68D05600C152AD /* zh-Hans */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
@@ -405,6 +413,7 @@
 				CEC3B7201A66475B005679E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CEC3B7211A66475B005679E6 /* Build configuration list for PBXNativeTarget "tipCalculatorTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +422,7 @@
 				CEC3B7231A66475B005679E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -8,6 +8,7 @@
 
 import UIKit
 
+var segmentedControlSelection = 0
 class SettingsViewController: UIViewController {
 
     @IBOutlet weak var tipOne: UITextField!
@@ -22,7 +23,8 @@ class SettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "Define Tip %"
+        selectedTheme.selectedSegmentIndex = segmentedControlSelection
+        setThemeBase(segmentedControlSelection)
         // Do any additional setup after loading the view.
     }
 
@@ -74,14 +76,36 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func setTheme(sender: AnyObject) {
-        if(selectedTheme.selectedSegmentIndex == 0){
+        setThemeBase(selectedTheme.selectedSegmentIndex)
+    }
+    
+    func setThemeBase(themeIndex: Int){
+        if(themeIndex == 0){
             self.navigationController?.navigationBar.barTintColor = nil
             UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.Default
             self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.blackColor()]
-        } else if(selectedTheme.selectedSegmentIndex == 1){
+            self.view.backgroundColor = UIColor.whiteColor()
+            segmentedControlSelection = 0
+            for view in self.view.subviews as [UIView] {
+                if let uiLabel = view as? UILabel {
+                    uiLabel.textColor = UIColor.blackColor()
+                } else if let uiTextField = view as? UITextField {
+                    uiTextField.textColor = UIColor.blackColor()
+                }
+            }
+        } else if(themeIndex == 1){
             self.navigationController?.navigationBar.barTintColor = UIColor.blackColor()
             UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
             self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+            self.view.backgroundColor = UIColor.blackColor()
+            segmentedControlSelection = 1
+            for view in self.view.subviews as [UIView] {
+                if let uiLabel = view as? UILabel {
+                    uiLabel.textColor = UIColor.whiteColor()
+                } else if let uiTextField = view as? UITextField {
+                    uiTextField.textColor = UIColor.whiteColor()
+                }
+            }
         }
     }
     /*

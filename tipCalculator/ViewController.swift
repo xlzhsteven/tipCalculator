@@ -7,13 +7,21 @@
 //
 
 import UIKit
+
+// Shared variable
 var timeAtEnterBackground = NSDate().timeIntervalSince1970
 var tipPercentages:[Double] = [15, 20, 25]
+
 class ViewController: UIViewController {
     @IBOutlet weak var amountTextField: UITextField!
     @IBOutlet weak var tipAmount: UILabel!
     @IBOutlet weak var totalAmount: UILabel!
+    @IBOutlet weak var onePersonSplit: UILabel!
+    @IBOutlet weak var twoPeopleSplit: UILabel!
+    @IBOutlet weak var threePeopleSplit: UILabel!
     @IBOutlet weak var tipControl: UISegmentedControl!
+    @IBOutlet weak var dvImage: UIImageView!
+    @IBOutlet weak var seperator: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,9 +30,34 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewWillAppear(animated: Bool) {
         for i in 0...2 {
             tipControl.setTitle(String(format: "%.2f%%", tipPercentages[i]), forSegmentAtIndex: i)
+        }
+        if segmentedControlSelection == 0 {
+            self.view.backgroundColor = UIColor.whiteColor()
+            for view in self.view.subviews as [UIView] {
+                if let uiLabel = view as? UILabel {
+                    uiLabel.textColor = UIColor.blackColor()
+                } else if let uiTextField = view as? UITextField {
+                    uiTextField.textColor = UIColor.blackColor()
+                }
+            }
+            var image = UIImage(named: "darthVader")
+            dvImage.image = image
+            seperator.backgroundColor = UIColor.blackColor()
+        } else if segmentedControlSelection == 1 {
+            self.view.backgroundColor = UIColor.blackColor()
+            for view in self.view.subviews as [UIView] {
+                if let uiLabel = view as? UILabel {
+                    uiLabel.textColor = UIColor.whiteColor()
+                } else if let uiTextField = view as? UITextField {
+                    uiTextField.textColor = UIColor.whiteColor()
+                }
+            }
+            var image = UIImage(named: "invertedDarthVader")
+            dvImage.image = image
+            seperator.backgroundColor = UIColor.whiteColor()
         }
     }
 
@@ -44,6 +77,9 @@ class ViewController: UIViewController {
         var tmpTotalAmount = userEnteredValue+tmpTipAmount
         tipAmount.text = currencyFormatter.stringFromNumber(tmpTipAmount)
         totalAmount.text = currencyFormatter.stringFromNumber(tmpTotalAmount)
+        onePersonSplit.text = totalAmount.text
+        twoPeopleSplit.text = currencyFormatter.stringFromNumber(tmpTotalAmount/2)
+        threePeopleSplit.text = currencyFormatter.stringFromNumber(tmpTotalAmount/3)
     }
     
     var currencyFormatter: NSNumberFormatter {
@@ -54,7 +90,7 @@ class ViewController: UIViewController {
     
     func willEnterForegroundNotification(){
         var timeAtEnterForground = NSDate().timeIntervalSince1970
-        if ((timeAtEnterForground-timeAtEnterBackground)>600){
+        if (timeAtEnterForground-timeAtEnterBackground)>600{
             NSUserDefaults.standardUserDefaults().setObject(nil, forKey: "amount")
             NSUserDefaults.standardUserDefaults().synchronize()
             amountTextField.text = NSUserDefaults.standardUserDefaults().objectForKey("amount") as? String
@@ -66,7 +102,6 @@ class ViewController: UIViewController {
         NSUserDefaults.standardUserDefaults().setObject(amountTextField.text, forKey: "amount")
         NSUserDefaults.standardUserDefaults().synchronize()
         let amount: AnyObject? = NSUserDefaults.standardUserDefaults().objectForKey("amount")
-        println("\(amount)")
     }
 }
 

@@ -83,8 +83,8 @@
 			children = (
 				CEC3B7041A66475B005679E6 /* AppDelegate.swift */,
 				CEC3B7061A66475B005679E6 /* ViewController.swift */,
-				CEC3B7081A66475B005679E6 /* Main.storyboard */,
 				CE47A3921A679FBD0025068B /* SettingsViewController.swift */,
+				CEC3B7081A66475B005679E6 /* Main.storyboard */,
 				CEC3B70B1A66475B005679E6 /* Images.xcassets */,
 				CEC3B70D1A66475B005679E6 /* LaunchScreen.xib */,
 				CEC3B7021A66475B005679E6 /* Supporting Files */,

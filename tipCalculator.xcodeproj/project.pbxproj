@@ -60,9 +60,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE7C49E81A6A2D0B00B20CF4 /* Gifs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Gifs;
+			sourceTree = "<group>";
+		};
 		CEC3B6F61A66475B005679E6 = {
 			isa = PBXGroup;
 			children = (
+				CE7C49E81A6A2D0B00B20CF4 /* Gifs */,
 				CEC3B7011A66475B005679E6 /* tipCalculator */,
 				CEC3B7171A66475B005679E6 /* tipCalculatorTests */,
 				CEC3B7001A66475B005679E6 /* Products */,

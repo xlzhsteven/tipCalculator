@@ -34,6 +34,7 @@ class ViewController: UIViewController {
         for i in 0...2 {
             tipControl.setTitle(String(format: "%.2f%%", tipPercentages[i]), forSegmentAtIndex: i)
         }
+        onEditing(self)
         if segmentedControlSelection == 0 {
             self.view.backgroundColor = UIColor.whiteColor()
             for view in self.view.subviews as [UIView] {
@@ -90,7 +91,7 @@ class ViewController: UIViewController {
     
     func willEnterForegroundNotification(){
         var timeAtEnterForground = NSDate().timeIntervalSince1970
-        if (timeAtEnterForground-timeAtEnterBackground)>600{
+        if (timeAtEnterForground-timeAtEnterBackground)>6{
             NSUserDefaults.standardUserDefaults().setObject(nil, forKey: "amount")
             NSUserDefaults.standardUserDefaults().synchronize()
             amountTextField.text = NSUserDefaults.standardUserDefaults().objectForKey("amount") as? String
